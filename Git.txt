@@ -1,0 +1,103 @@
+Terms(thuật ngữ) :
+{
+    Repository (repo) : thư mục, dự án
+
+    Initial commit : đánh dấu thòi điểm lưu ban đầu
+
+    Branch : cành của repo(branch name mặc định của repo là master)
+
+    Commit : thời điểm dã đánh đánh dấu
+
+    conflict : xung đột
+
+    Local : những tư liệu trong máy tính
+
+    Remote : những tư liệu không nằm trong máy(github)
+
+    folder : thư mục
+
+    merge : trọn 2 branch lại với nhau
+
+}
+
+Commands(lệnh) :
+{
+    Lệnh git cơ bản(sử dụng terminal của vscode) :
+    {
+        git init : biến 1 repo thành git repository(khởi tạo git cho repo)
+
+        git status : cho thấy trạng thái của repo
+
+        git add <file name> : lưu lại 1 file của repo vào git
+
+        git add . : lưu lại toàn bộ file của repo vào git
+
+        git reset : bỏ lưu toàn bộ file của repo ra khỏi git
+
+        git commit -m 'commit name' : đánh dấu thời điểm đó(lưu ý : phải dùng lệnh "git add ." rồi mới dùng lệnh này)
+
+        git log : coi những commit bao gồm commit ID, tên người commit, commit, commit name
+
+        git log --oneline : hiển thị những commit đang có trong repo(nhưng hiển thị gọn hơn chỉ : hiển thị commit ID,
+        commit name)
+
+        git checkout <commit ID> : trở về commit đó
+
+        git checkout -b <branch name> : khởi tạo 1 cành trong repo và chuyển qua branch đó
+
+        git branch : hiển thị các cành của repo
+
+        git checkout <branch name> : trở về branch đó
+
+        git merge <branch name> : hợp branch đó vào branch hiện tại nhưng branch đó vẫn tồn tại(lưu ý : nếu branch 
+        đó đã chỉnh sửa vào cùng 1 dòng/đoạn code trong file với branch hiện tại thì sẽ xảy ra conflict và lúc đó 
+        sẽ có thồng báo(<<<<<<< HEAD : phần code của branch hiện tại; >>>>>> conflict : phần code của branch đó; 
+        ======= : ngăn cách giữa 2 conflict), lúc này cần chọn giữ lại dòng/đoạn code nào và xóa những dòng này 
+        <<<<<<< HEAD, =======, >>>>>> conflict và dùng lệnh "git add ." rồi dùng lệnh "git commit"(không cần thêm 
+        commit name)) 
+
+        dùng lệnh "git checkout master" rồi dùng lệnh "git branch -d <branch name>" : xóa 1 branch
+    }
+
+    Lệnh đẩy code từ máy lên github(sử dụng terminal của vscode) :
+    {
+        git remote add <link name> <link của repo trên gitub> : định nghĩa tên cho link của repo trên gitub
+        
+        git push <link name> <branch name> : đẩy branch lên github
+    }
+
+    Lệnh lấy code từ github về máy(sử dụng terminal của máy) :
+    {
+        bước 1. tạo 1 folder 
+
+        bước 2. dùng lệnh "cd <kéo thả folder vào terminal>"
+
+        bước 3. dùng lện "git clone <link của repo trên gitub>"
+
+        bước 4. dùng lện "ls" : lấy folder name
+
+        bước 5. dùng lện "cd <folder name>"
+
+        bước 6. dùng lện "code ." : mở vscode
+    }
+
+    lệnh sau khi lấy code từ trên github(sử dụng terminal của vscode) : {
+        git remote add <link name> <link của repo trên gitub> : định nghĩa tên cho link của repo trên gitub
+
+        git push(không cần link của repo trên gitub nữa) : đẩy code lên github
+
+        git push -u <link name> <branch name> : đẩy branch đó lên trên github(lưu ý : chỉ cần dùng <link name> cho 
+        lần đầu tiên dùng lệnh này, về sau chỉ cần dùng lệnh "git push -u <branch name>")
+
+        dùng lệnh "git checkout master" rồi dùng lệnh "git fetch <link name>" rồi dùng lệnh 
+        "git checkout -b <branch name> <link name>/<branch name>" : lệnh lấy branch trên github về máy
+
+        dùng lệnh "git checkout master" rồi dùng lệnh "git pull" : lấy code sau khi được merge ở trên github
+
+        tạo file mới trên vscode với tên <.gitignore> gõ trong file <.gitignore> tên file muốn ẩn khi dùng lệnh 
+        "git push"
+    }
+
+    lưu ý : để thoát lệnh thì enter hoặc ":q", làm sạch terminal thì dùng "clear", tên repo trên github phải trùng 
+    với tên repo cần đẩy lên, tham khảo : https://www.youtube.com/watch?v=QE_mkDiu4hE&list=LL&index=18&t=1269s
+    }
