@@ -36,7 +36,7 @@ Commands(lệnh) :
 
         git commit -m 'commit name' : đánh dấu thời điểm đó(lưu ý : phải dùng lệnh "git add ." rồi mới dùng lệnh này)
 
-        git log : coi những commit bao gồm commit ID, tên người commit, commit, commit name
+        git log : hiển thịthị những commit bao gồm commit ID, tên người commit, commit, commit name
 
         git log --oneline : hiển thị những commit đang có trong repo(nhưng hiển thị gọn hơn chỉ : hiển thị commit ID,
         commit name)
