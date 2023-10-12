@@ -81,6 +81,11 @@ Commands(lệnh) :
         bước 6. dùng lện "code ." : mở vscode
     }
 
+    Lệnh đồng bộ code từ github về máy(sử dụng terminal của máy) :
+    {
+        git pull <link repo> <bracnh name>
+    }
+
     lệnh sau khi lấy code từ trên github(sử dụng terminal của vscode) : {
         git remote add <link name> <link của repo trên gitub> : định nghĩa tên cho link của repo trên gitub
 
