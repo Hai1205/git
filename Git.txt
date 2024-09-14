@@ -61,9 +61,34 @@ Commands(lệnh) :
 
     Lệnh đẩy code từ máy lên github(sử dụng terminal của vscode) :
     {
-        git remote add <link name> <link của repo trên gitub> : định nghĩa tên cho link của repo trên gitub
+        git remote add <git project name> <link của repo trên gitub> : định nghĩa tên cho link của repo trên gitub, chỉ dùng cho lần đầu tiên
         
-        git push <link name> <branch name> : đẩy branch lên github
+        git push <link name> <branch name> : đẩy code từ branch tại local lên github
+
+        bước 1. git add .
+
+        bước 2. git commit -m '<commit name>'
+
+        bước 3. git push <git project name> <branch>
+    }
+
+    Cách viết commit chuyên nghiệp :
+    {
+        <type>: <description>
+
+        <type>:
+            + feat: một tính năng mới
+            + fix: sửa lỗi
+            + docs: cập nhật tài liệu
+            + style: format code
+            + refactor: đổi tên(lớp, hàm, biến), tách hàm, xóa code thừa
+            + perf: chỉnh hiệu năng
+            + test: thêm test case, sửa unit test
+        <description>:
+            + Mô tả ngắn gọn(không quá 50 ký tự)
+            + sử dụng câu mệnh lệnh ở thì hiện tại
+            + không viết hoa chữ cái đầu tiên
+            + không dung dấu chấm ở cuối câu
     }
 
     Lệnh lấy code từ github về máy(sử dụng terminal của máy) :
